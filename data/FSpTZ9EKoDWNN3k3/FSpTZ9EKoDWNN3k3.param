@@ -1,0 +1,1 @@
+{"label_name":"number","learning_rate":"0.001","batch_size":"64","hidden_layer":"3","hidden_unit":["32","32","32","32"],"dropout":["0.2","0.2","0.2","0.2"],"epoch":"30","activation_function":"softmax","loss_function":"categorical_crossentropy","data_dimension":"64","timesteps":"1"}

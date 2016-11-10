@@ -1,0 +1,19 @@
+- var page_title = 'Index - AOJ';
+include /jade/head.jade
+body
+  h1
+   |#{api.api_name}
+  h2#api-key
+   |#{api.api_key}
+  label 테스트파일 (CSV)
+  input#file(type='file')
+  button#show
+   |보기
+  button#test
+   |시작
+  div#select-div
+  div
+    table#table
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='/js/api.js')
+  // script(src='/js/bootstrap.min.js')

@@ -1,0 +1,76 @@
+- var page_title = '지능형 인지 프레임워크';
+- var tmp = ["active","","success","","warning","","danger","","info",""]
+include /jade/head.jade
+body
+  // form(enctype='multipart/form-data')
+  #wrapper
+    include /jade/nav.jade
+    .navbar-default.sidebar(role='navigation')
+      .sidebar-nav.navbar-collapse
+        ul#side-menu.nav.in
+          li
+            a(href='/')
+              i.fa.fa-dashboard.fa-fw
+              |  Dashboard
+          li
+            a.active(href='myapi')
+              i.fa.fa-table.fa-fw
+              |  Workspace
+          // li
+          //   a(href='#')
+          //     i.fa.fa-check.fa-fw  
+          //     |  Success API
+          // li
+          //   a(href='#')
+          //     i.fa.fa-tasks.fa-fw
+          //     |  Learning API
+          // li
+          //   a(href='#')
+          //     i.fa.fa-warning.fa-fw
+          //     |  Err API
+      // /.sidebar-collapse
+    // /.navbar-static-side
+  |         
+  #page-wrapper(style='min-height: 804px;')
+    .row
+      .col-lg-12
+        h1.page-header Test API
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-heading
+          .panel-body
+            .row
+              .form-group.col-lg-10
+                h1
+                  |#{api.api_name}
+                h2.hidden#api-key
+                  |#{api.api_key}
+              .form-group.col-lg-10
+                input#file(type='file')
+              .form-group.col-lg-10
+                button.btn.btn-default.col-lg-1#show
+                 |보기
+                button.btn.btn-default.col-lg-1#test
+                 |시작
+                button.btn.btn-deafult.col-lg-1#json
+                 |JSON
+          pre#json-data
+          div.form-group.col-lg-10#result_div
+          div.form-group.col-lg-10#table
+
+script(src='/link/jquery/dist/jquery.min.js')
+// Bootstrap Core JavaScript
+script(src='/link/bootstrap/dist/js/bootstrap.min.js')
+// Metis Menu Plugin JavaScript
+script(src='/link/metisMenu/dist/metisMenu.min.js')
+// Morris Charts JavaScript
+script(src='/link/raphael/raphael.min.js')
+// Custom Theme JavaScript
+script(src='/link/datatables/media/js/jquery.dataTables.min.js')
+script(src='/link/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js')
+script(src='/link/datatables-responsive/js/dataTables.responsive.js')
+script(src='/link/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js')
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+script(src='/js/api.js')
+// script(src='/js/bootstrap.min.js')

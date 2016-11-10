@@ -1,0 +1,258 @@
+- var page_title = '지능형 인지 프레임워크';
+- var tmp = ["active","","success","","warning","","danger","","info",""]
+include /jade/head.jade
+body
+  // form(enctype='multipart/form-data')
+  #wrapper
+      // Navigation
+      nav.navbar.navbar-default.navbar-static-top(role='navigation', style='margin-bottom: 0')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+          |                 
+          a.navbar-brand(href='/') 지능형 인지 프레임워크
+        // /.navbar-header
+        ul.nav.navbar-top-links.navbar-right
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-tasks.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-tasks
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 1
+                      |                                         
+                      span.pull-right.text-muted 40% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 2
+                      |                                         
+                      span.pull-right.text-muted 20% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                        span.sr-only 20% Complete
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 3
+                      |                                         
+                      span.pull-right.text-muted 60% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 4
+                      |                                         
+                      span.pull-right.text-muted 80% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete (danger)
+              |                         
+              li.divider
+              |                         
+              li
+                a.text-center(href='#')
+                  strong See All Tasks
+                  |                                 
+                  i.fa.fa-angle-right
+            // /.dropdown-tasks
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-bell.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-alerts
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-comment.fa-fw
+                    |  New Comment
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-twitter.fa-fw
+                    |  3 New Followers
+                    |                                     
+                    span.pull-right.text-muted.small 12 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-envelope.fa-fw
+                    |  Message Sent
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-tasks.fa-fw
+                    |  New Task
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-upload.fa-fw
+                    |  Server Rebooted
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a.text-center(href='#')
+                  strong See All Alerts
+                  |                                 
+                  i.fa.fa-angle-right
+            // /.dropdown-alerts
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-user.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-user
+              li
+                a(href='#')
+                  i.fa.fa-user.fa-fw
+                  |  User Profile
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-gear.fa-fw
+                  |  Settings
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='/logout')
+                  i.fa.fa-sign-out.fa-fw
+                  |  Logout
+            // /.dropdown-user
+          // /.dropdown
+        // /.navbar-top-links
+        .navbar-default.sidebar(role='navigation')
+          .sidebar-nav.navbar-collapse
+            ul#side-menu.nav.in
+              li
+                a(href='/')
+                  i.fa.fa-dashboard.fa-fw
+                  |  Dashboard
+              |                         
+              li
+                a(href='myapi')
+                  i.fa.fa-table.fa-fw
+                  |  My API
+              |                         
+              li
+                a.active(href='createapi')
+                  i.fa.fa-edit.fa-fw
+                  |  Create API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-check.fa-fw
+                  |  Success API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-tasks.fa-fw
+                  |  Learning API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-warning.fa-fw
+                  |  Err API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-bar-chart-o.fa-fw
+                  |  Chart
+          // /.sidebar-collapse
+        // /.navbar-static-side
+      |         
+      #page-wrapper(style='min-height: 804px;')
+        .row
+          .col-lg-12
+            h1.page-header Create API
+        .row
+          .col-lg-12
+            .panel.panel-default
+              .panel-heading
+                | Input label                
+              .panel-body
+                .row
+                  .col-lg-6
+                    .div#upper
+                      .form-group
+                        label API이름
+                        input.form-control(placeholder="API이름")#api-name                        
+                      .form-group
+                        label Input csv file
+                        input(type='file')#file
+                    input#train-param(hidden='')
+                    button(type='submit')#next 다음
+                  .col-lg-12
+                    button#visualize(hidden='') 그래프                                      
+                    button#upload(hidden='') 만들기                  
+                div#viz
+  script(src='/link/jquery/dist/jquery.min.js')
+  // Bootstrap Core JavaScript
+  script(src='/link/bootstrap/dist/js/bootstrap.min.js')
+  // Metis Menu Plugin JavaScript
+  script(src='/link/metisMenu/dist/js/metisMenu.min.js')
+  // Morris Charts JavaScript
+  script(src='/link/raphael/raphael.min.js')
+  // Custom Theme JavaScript
+  script(src='/link/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='/js/createapi.js')

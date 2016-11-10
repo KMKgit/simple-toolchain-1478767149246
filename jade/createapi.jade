@@ -1,0 +1,89 @@
+- var page_title = '지능형 인지 프레임워크';
+- var tmp = ["active","","success","","warning","","danger","","info",""]
+include /jade/head.jade
+body
+  // form(enctype='multipart/form-data')
+  #wrapper
+   include /jade/nav.jade
+  .navbar-default.sidebar(role='navigation')
+    .sidebar-nav.navbar-collapse
+      ul#side-menu.nav.in
+        li
+          a(href='/')
+            i.fa.fa-dashboard.fa-fw
+            |  Dashboard
+        li
+          a.active(href='myapi')
+            i.fa.fa-table.fa-fw
+            |  Workspace
+        // li
+        //   a(href='#')
+        //     i.fa.fa-check.fa-fw
+        //     |  Success API
+        // li
+        //   a(href='#')
+        //     i.fa.fa-tasks.fa-fw
+        //     |  Learning API
+        // li
+        //   a(href='#')
+        //     i.fa.fa-warning.fa-fw
+        //     |  Err API
+    // /.sidebar-collapse
+  // /.navbar-static-side
+|         
+#page-wrapper(style='min-height: 804px;')
+  .row
+    .col-lg-12
+      h1.page-header Create API
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading
+          | 
+        .panel-body
+          .row
+            .col-lg-12
+              .div#upper
+              h1#api-name-header
+              div#process1
+                .form-group.col-sm-10
+                  label.col-sm-2.control-label API 이름
+                  div.col-sm-3.col-sm-offset-1
+                    input.form-control(placeholder="API이름")#api-name                        
+                .form-group.col-sm-10
+                  label.col-sm-3.control-label Input data file
+                  div.col-sm-3
+                    input(type='file')#file
+                .form-group.col-sm-10
+                  button.btn.btn-default#next1
+                    |다음1
+              div#process2(hidden='')
+                label 타입 입력
+                div#types-div
+                div#data-table
+                button.btn.btn-default#next2
+                  |다음2
+              div#process3(hidden='')
+                button.btn.btn-default#next3
+                  |다음3
+              div#process4(hidden='')
+                div.form-group.col-sm-10#al-list
+                div.form-group.col-sm-10#parameters
+                .form-group.col-sm-10
+                  button.btn.btn-default#next4
+                    |다음4
+            .col-lg-offset-9.col-lg-12#graph(hidden='')
+              button#visualize(hidden='') 그래프                                      
+              button#upload(hidden='') 만들기       
+          .container#viz
+  script(src='/link/jquery/dist/jquery.min.js')
+  // Bootstrap Core JavaScript
+  script(src='/link/bootstrap/dist/js/bootstrap.min.js')
+  // Metis Menu Plugin JavaScript
+  script(src='/link/metisMenu/dist/js/metisMenu.min.js')
+  // Morris Charts JavaScript
+  script(src='/link/raphael/raphael.min.js')
+  // Custom Theme JavaScript
+  script(src='/link/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='/js/createapi.js')

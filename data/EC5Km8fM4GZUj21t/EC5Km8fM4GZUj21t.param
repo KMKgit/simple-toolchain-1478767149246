@@ -1,0 +1,1 @@
+{"label_name":"sdf","learning_rate":"sdf","batch_size":"asdf","hidden_layer":"fasdf","hidden_unit":["asdf"],"dropout":["asdf"],"epoch":"asdf","activation_function":"linear","loss_function":"mean_squared_error","data_dimension":"asdf","timesteps":"asdf"}

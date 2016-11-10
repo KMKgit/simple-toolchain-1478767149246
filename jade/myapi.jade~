@@ -1,0 +1,306 @@
+- var page_title = '지능형 인지 프레임워크';
+- var tmp = ["active","","success","","warning","","danger","","info",""]
+include /jade/head.jade
+
+body
+  #wrapper
+      // Navigation
+      nav.navbar.navbar-default.navbar-static-top(role='navigation', style='margin-bottom: 0')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+          |                 
+          a.navbar-brand(href='/') 지능형 인지 프레임워크
+        // /.navbar-header
+        ul.nav.navbar-top-links.navbar-right
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-tasks.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-tasks
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 1
+                      |                                         
+                      span.pull-right.text-muted 40% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 2
+                      |                                         
+                      span.pull-right.text-muted 20% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                        span.sr-only 20% Complete
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 3
+                      |                                         
+                      span.pull-right.text-muted 60% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 4
+                      |                                         
+                      span.pull-right.text-muted 80% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete (danger)
+              |                         
+              li.divider
+              |                         
+              li
+                a.text-center(href='#')
+                  strong See All Tasks
+                  |                                 
+                  i.fa.fa-angle-right
+            // /.dropdown-tasks
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-bell.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-alerts
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-comment.fa-fw
+                    |  New Comment
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-twitter.fa-fw
+                    |  3 New Followers
+                    |                                     
+                    span.pull-right.text-muted.small 12 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-envelope.fa-fw
+                    |  Message Sent
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-tasks.fa-fw
+                    |  New Task
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-upload.fa-fw
+                    |  Server Rebooted
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a.text-center(href='#')
+                  strong See All Alerts
+                  |                                 
+                  i.fa.fa-angle-right
+            // /.dropdown-alerts
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-user.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-user
+              li
+                a(href='#')
+                  i.fa.fa-user.fa-fw
+                  |  User Profile
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-gear.fa-fw
+                  |  Settings
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='/logout')
+                  i.fa.fa-sign-out.fa-fw
+                  |  Logout
+            // /.dropdown-user
+          // /.dropdown
+        // /.navbar-top-links
+        .navbar-default.sidebar(role='navigation')
+          .sidebar-nav.navbar-collapse
+            ul#side-menu.nav.in
+              li
+                a(href='/')
+                  i.fa.fa-dashboard.fa-fw
+                  |  Dashboard
+              |                         
+              li
+                a.active(href='myapi')
+                  i.fa.fa-table.fa-fw
+                  |  My API
+              |                         
+              li
+                a(href='createapi')
+                  i.fa.fa-edit.fa-fw
+                  |  Create API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-check.fa-fw
+                  |  Success API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-tasks.fa-fw
+                  |  Learning API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-warning.fa-fw
+                  |  Err API
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-bar-chart-o.fa-fw
+                  |  Chart
+          // /.sidebar-collapse
+        // /.navbar-static-side
+      |         
+      #page-wrapper(style='min-height: 804px;')
+        .row
+          .col-lg-12
+            h1.page-header My API
+        .row
+          .col-lg-12
+            .panel.panel-default
+              .panel-heading
+                | API tables
+              // /.panel-heading
+              .panel-body
+                .dataTable_wrapper
+                  #dataTables-example_wrapper.dataTables_wrapper.form-inline.dt-bootstrap.no-footer
+                    .row
+                      .col-sm-12
+                        table#dataTables-example.table.table-striped.table-bordered.table-hover.dataTable.no-footer.dtr-inline(style='width: 100%;', aria-describedby='dataTables-example_info',     role='grid', width='100%')
+                          thead
+                            tr(role='row')
+                              th.sorting_asc(aria-label='API 이름: activate to sort column descending', aria-sort='ascending', style='width: 10%;', colspan='1', rowspan='1', aria-controls='dataTables-example', tabindex='0') API 이름
+                              th.sorting(aria-label='API 키: activate to sort column ascending', style='width: 30%;', colspan='1', rowspan='1', aria-controls='dataTables-example', tabindex='0') API 키
+                              th.sorting(aria-label='방법: activate to sort column ascending', style='width: 10%;', colspan='1', rowspan='1', aria-controls='dataTables-example', tabindex='0') 방법
+                              th.sorting(aria-label='학습완료: activate to sort column ascending', style='width: 10%;', colspan='1', rowspan='1', aria-controls='dataTables-example', tabindex='0') 학습완료
+                              th.sorting(aria-label='등록일: activate to sort column ascending', style='width: 40%;', colspan='1', rowspan='1', aria-controls='dataTables-example', tabindex='0') 등록일
+                          tbody
+                            - for (var i = 0; i < myapis.length; ++i) {
+                              tr(class=tmp[i%10])
+                                td.sorting_1.center
+                                  a(href='/api?aid=' + myapis[i].api_key)
+                                    |#{myapis[i].api_name} 
+                                td.center
+                                  |#{myapis[i].api_key}
+                                td.center
+                                  |#{myapis[i].method}
+                                td.center
+                                  |#{myapis[i].valid}
+                                td.center
+                                  |#{myapis[i].write_time}
+                            - }
+                    .row
+                      .col-sm-6
+                        #dataTables-example_info.dataTables_info(aria-live='polite', role='status') Showing 1 to 10 of #{myapis.length} entries
+                      .col-sm-6
+                        #dataTables-example_paginate.dataTables_paginate.paging_simple_numbers
+                          ul.pagination
+                            li#dataTables-example_previous.paginate_button.previous.disabled(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') Previous
+                            li.paginate_button.active(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') 1
+                            li.paginate_button(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') 2
+                            li.paginate_button(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') 3
+                            li.paginate_button(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') 4
+                            li.paginate_button(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') 5
+                            li.paginate_button(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') 6
+                            li#dataTables-example_next.paginate_button.next(tabindex='0', aria-controls='dataTables-example')
+                              a(href='#') Next
+                // /.table-responsive
+                .well
+                  h4 DataTables Usage Information
+                  p
+                    | DataTables is a very flexible, advanced tables plugin for jQuery. we are using a specialized version of DataTables built for Bootstrap 3. We have also customized the table headings to use Font Awesome icons in place of images. For complete documentation on DataTables, visit their website at 
+                    a(target='_blank', href='https://datatables.net/') https://datatables.net/
+                    | .
+                  a.btn.btn-default.btn-lg.btn-block(target='_blank', href='https://datatables.net/') View DataTables Documentation
+              // /.panel-body
+            // /.panel
+          // /.col-lg-12
+    
+
+  script(src='/link/jquery/dist/jquery.min.js')
+  // Bootstrap Core JavaScript
+  script(src='/link/bootstrap/dist/js/bootstrap.min.js')
+  // Metis Menu Plugin JavaScript
+  script(src='/link/metisMenu/dist/js/metisMenu.min.js')
+  // Morris Charts JavaScript
+  script(src='/link/raphael/raphael.min.js')
+  // Custom Theme JavaScript
+  script(src='/link/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+

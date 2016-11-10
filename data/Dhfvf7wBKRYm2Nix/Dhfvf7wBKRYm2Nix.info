@@ -1,0 +1,1 @@
+[{"column":"sepal_length","types":"String"},{"column":"sepal_width","types":"String"},{"column":"petal_length","types":"Integer"},{"column":"petal_width","types":"Integer"},{"column":"species","types":"Integer"}]

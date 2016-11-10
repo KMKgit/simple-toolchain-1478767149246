@@ -1,0 +1,1 @@
+{"label_name":"species","learning_rate":"0.01","batch_size":"1","hidden_layer":"2","hidden_unit":["32","32","32"],"dropout":["0.2","0.2","0.2"],"epoch":"10","activation_function":"softmax","loss_function":"categorical_crossentropy","data_dimension":"4","timesteps":"1"}

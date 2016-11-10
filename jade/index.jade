@@ -1,0 +1,140 @@
+- var page_title = '지능형 인지 프레임워크';
+include /jade/head.jade
+
+body
+  if (!user)
+    div.form-group
+      div.col-sm-offset-2.col-sm-10
+        a.btn.btn-default(href="/login") sign in
+  else     
+    #wrapper
+      include /jade/nav.jade
+      .navbar-default.sidebar(role='navigation')
+        .sidebar-nav.navbar-collapse
+          ul#side-menu.nav.in
+            li
+              a.active(href='/')
+                i.fa.fa-dashboard.fa-fw
+                |  Dashboard
+            li
+              a(href='myapi')
+                i.fa.fa-table.fa-fw
+                |  Workspace
+        //     li
+        //       a(href='successapi')
+        //         i.fa.fa-check.fa-fw
+        //         |  Success API
+        //     li
+        //       a(href='learningapi')
+        //         i.fa.fa-tasks.fa-fw
+        //         |  Learning API
+        //     li
+        //       a(href='errapi')
+        //         i.fa.fa-warning.fa-fw
+        //         |  Err API
+        // // /.sidebar-collapse
+      // /.navbar-static-side
+    |         
+    #page-wrapper(style='min-height: 804px;')
+      .row
+        .col-lg-12
+          h1.page-header Dashboard
+        // /.col-lg-12
+      // /.row
+      .row
+        .col-lg-3.col-md-6
+          .panel.panel-primary
+            .panel-heading
+              .row
+                .col-xs-3
+                  i.fa.fa-table.fa-5x
+                |                                 
+                .col-xs-9.text-right
+                  .huge #{successCount + learningCount + errCount}
+                  div My API
+            |                         
+            a(href='#')
+              .panel-footer
+                span.pull-left View Details
+                |                                 
+                span.pull-right
+                  i.fa.fa-arrow-circle-right
+                |                                 
+                .clearfix
+        |                 
+        .col-lg-3.col-md-6
+          .panel.panel-green
+            .panel-heading
+              .row
+                .col-xs-3
+                  i.fa.fa-check.fa-5x
+                |                                 
+                .col-xs-9.text-right
+                  .huge #{successCount}
+                  div Success API
+            |                         
+            a(href='#')
+              .panel-footer
+                span.pull-left View Details
+                |                                 
+                span.pull-right
+                  i.fa.fa-arrow-circle-right
+                |                                 
+                .clearfix
+        |                 
+        .col-lg-3.col-md-6
+          .panel.panel-yellow
+            .panel-heading
+              .row
+                .col-xs-3
+                  i.fa.fa-tasks.fa-5x
+                |                                 
+                .col-xs-9.text-right
+                  .huge #{learningCount}
+                  div Learning API
+            |                         
+            a(href='#')
+              .panel-footer
+                span.pull-left View Details
+                |                                 
+                span.pull-right
+                  i.fa.fa-arrow-circle-right
+                |                                 
+                .clearfix
+        |                 
+        .col-lg-3.col-md-6
+          .panel.panel-red
+            .panel-heading
+              .row
+                .col-xs-3
+                  i.fa.fa-warning.fa-5x
+                |                                 
+                .col-xs-9.text-right
+                  .huge #{errCount}
+                  div Err API
+            |                         
+            a(href='#')
+              .panel-footer
+                span.pull-left View Details
+                |                                 
+                span.pull-right
+                  i.fa.fa-arrow-circle-right
+                |                                 
+                .clearfix
+            // /.panel-footer
+          // /.panel .chat-panel
+        // /.col-lg-4
+      // /.row
+    // /#page-wrapper
+  // /#wrapper
+  // jQuery
+script(src='/link/jquery/dist/jquery.min.js')
+// Bootstrap Core JavaScript
+script(src='/link/bootstrap/dist/js/bootstrap.min.js')
+// Metis Menu Plugin JavaScript
+// Morris Charts JavaScript
+script(src='/link/raphael/raphael.min.js')
+// Custom Theme JavaScript
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+// script(src='/js/index.js')
+

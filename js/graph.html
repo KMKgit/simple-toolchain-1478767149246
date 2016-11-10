@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<title>Mk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+</head>
+
+<body>
+<script src="http://www.d3plus.org/js/d3.js"></script>
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+<div id="viz"></div>
+
+<script>
+//var x_value = document.getElementById("x_value").value;
+//var y_value = document.getElementById("y_value").value;
+//var name = document.getElementById("name").value;
+var x_value = "year";
+var y_value = "value";
+var name = "name";
+
+var visualization = d3plus.viz()
+  .container("#viz")
+  .data("/csv/data.csv") 
+  .type("bar") // defalut type
+  //line, scatter, bar is good but bar has bug
+  //from bar to line or scatter, css will be change (square & responsible)
+  //so default is bar -> no problem
+  //if you can fix it, you do
+  //i was failed to fix
+  .id(name)
+  .text(name) 
+  .x(x_value) 
+  .y(y_value)
+  .ui([{
+      "label": "select",
+      "method": "type", //type can change to line, scatter, box, bar
+      "type": "drop",
+      "value": ["line","scatter","box","bar"]
+  }])
+  .time(x_value) 
+  .draw()
+
+console.log(data[0])
+</script>
+</body>

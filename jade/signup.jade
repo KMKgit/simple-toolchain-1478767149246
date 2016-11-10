@@ -1,0 +1,33 @@
+- var page_title = '지능형 인지 프레임워크';
+include /jade/head.jade
+
+body
+
+    div.col-sm-offset-2.col-sm-10
+      h2 Sign up
+    div.col-sm-offset-2.col-sm-3
+      hr
+
+    div.form-group.col-sm-offset-2.col-sm-10
+      label.col-sm-1.control-label Email
+      div.col-sm-3
+        input.form-control(type='email', placeholder="Email")#email-inp
+  
+    div.form-group.col-sm-offset-2.col-sm-10
+      label.col-sm-1.control-label Name
+      div.col-sm-3
+        input.form-control(placeholder="Name")#name-inp
+  
+    div.form-group.col-sm-offset-2.col-sm-10
+      label.col-sm-1.control-label Password
+      div.col-sm-3
+        input.form-control(type='password', placeholder="Password")#pw1-inp
+
+    div.form-group.col-sm-offset-2.col-sm-10
+      label.col-sm-1.control-label Confirm
+      div.col-sm-3
+        input.form-control(type='password', placeholder="Password")#pw2-inp
+
+    div.form-group.col-sm-offset-2.col-sm-10
+      button.btn.btn-default(type='submit')#signup-btn Sign up
+  script(src='/js/signup.js')

@@ -1,0 +1,42 @@
+- var page_title = '지능형 인지 프레임워크';
+include /jade/head.jade
+
+body
+  if (!user)
+    div.col-sm-offset-2.col-sm-10
+      h2 Login      
+    div.col-sm-offset-2.col-sm-3
+      hr
+    div.form-group.col-sm-offset-2.col-sm-10
+      label.col-sm-1.control-label ID
+      div.col-sm-3
+        input.form-control(placeholder="ID")#id-inp
+  
+    div.form-group.col-sm-offset-2.col-sm-10
+      label.col-sm-1.control-label Password
+      div.col-sm-3
+        input.form-control(placeholder="PASSWORD",type="password")#pw-inp
+     
+     div.form-group
+       div.col-sm-offset-2.col-sm-10
+         button.btn.btn-default#login-btn sign in
+         a.btn.btn-default(href="/signup", role="button") sign up
+  else
+     div.form-group
+       div.col-sm-offset-2.col-sm-10
+         button.btn.btn-default#logout-btn logout
+
+     
+  script(src='/link/jquery/dist/jquery.min.js')
+  // Bootstrap Core JavaScript
+  script(src='/link/bootstrap/dist/js/bootstrap.min.js')
+  // Metis Menu Plugin JavaScript
+  script(src='/link/metisMenu/dist/js/metisMenu.min.js')
+  // Morris Charts JavaScript
+  script(src='/link/raphael/raphael.min.js')
+  script(src='/link/morrisjs/morris.min.js')
+  script(src='/link/morrisjs/morris-data.js')
+  // Custom Theme JavaScript
+  script(src='/link/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='/js/login.js')
